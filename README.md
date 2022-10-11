@@ -56,3 +56,22 @@
    helloworld!
    ```
    
+3. `idx_number[array]`
+
+   ```c
+   #include <stdio.h>
+
+   int main(void) {
+       int array[] = {1, 2, 3};
+
+       printf("%d\n", 2[array]);
+   }
+   ```
+   ```shell
+   $ gcc main.c && ./a.out
+   3
+   ```
+
+   `array[idx_number]` is the syntax sugar for `*(array + idx_number)`, according
+   to the commutative law of addition, `array + idx_number` is equivalent to
+   `idx_number + array`, thus `idx_number[array]` is equal to `array[idx_number]`
